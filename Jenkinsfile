@@ -5,6 +5,7 @@ pipeline {
 
         stage('Clone') {
             steps {
+                git branch: 'main',
                 git 'https://github.com/SGPRINCE46/jenkins.git'
             }
         }
