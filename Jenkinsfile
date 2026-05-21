@@ -1,14 +1,18 @@
 pipeline {
     agent any
-      tools {
+
+    tools {
         maven 'Maven3'
     }
+
     stages {
 
         stage('Clone') {
             steps {
-                git branch: 'main',
-                git 'https://github.com/SGPRINCE46/jenkins.git'
+                git(
+                    branch: 'main',
+                    url: 'https://github.com/SGPRINCE46/jenkins.git'
+                )
             }
         }
 
