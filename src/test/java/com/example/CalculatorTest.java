@@ -1,13 +1,27 @@
-package com.example;
+// Parent class
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+// Child class
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
 
-public class CalculatorTest {
+// Main class
+public class InheritanceExample {
+    public static void main(String[] args) {
 
-    @Test
-    void testAdd() {
-        Calculator calc = new Calculator();
-        assertEquals(10, calc.add(5, 5));
+        Dog d = new Dog();
+
+        // Calling parent class method
+        d.sound();
+
+        // Calling child class method
+        d.bark();
     }
 }
